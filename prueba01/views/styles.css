@@ -1,0 +1,88 @@
+html, body {
+    margin: 0px;
+    height: 100%;
+}
+.container-principal{
+    background-color: #c1c7d0;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor-card{
+    background-color: #ffffff;
+    width: 70%;
+    height: 80%;
+
+    border-radius: 1.5rem;
+    box-shadow: rgba(0,0,0,0.5) 0px 5px 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.contenedor-imagen{
+    width: 50%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.contenedor-texto{
+    background-color: antiquewhite;
+    width: 50%;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem;
+    border-radius: 1rem;
+    box-shadow: rgba(0,0,0,0.5) 0px 5px 15px;
+}
+
+.nombre{
+    font-family: "Adobe Arabic", serif ;
+    font-size: x-large;
+}
+
+.type{
+    font-family: "Adobe Arabic", serif ;
+    font-size: large;
+    font-style: italic;
+    margin-top: -0.5rem;
+}
+
+.mana{
+    border-radius: 1rem;
+    background-color: #c1c7d0;
+}
+.stats{
+
+    font-family: "Adobe Arabic", serif ;
+    font-size: large;
+    margin-top: 0.2rem;
+}
+
+.text{
+    font-family: "Adobe Arabic", serif ;
+    font-size: medium;
+    font-style: italic;
+    margin: 2rem;
+    background-color: #adafb4;
+    border-radius: 1rem;
+
+}
+
+.imagen{
+    border-radius: 1.35rem;
+    height: 80%;
+    margin-left: 3rem;
+    margin-right: 1rem;
+}
