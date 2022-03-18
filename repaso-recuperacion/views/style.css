@@ -1,0 +1,19 @@
+#main-container{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+
+#title{
+    font-family: "Arial", fantasy;
+}
+
+.paragraphs{
+    font-family: "Adobe Arabic", fantasy;
+}
+
+#search-result{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}

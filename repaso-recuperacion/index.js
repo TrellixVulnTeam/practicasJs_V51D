@@ -70,12 +70,22 @@ app.get('/search-archetype', async (req, res) => {
     const atk = req.query.atk;
 
     /*filter only works for arrays*/
-    const jsonFiltered = json.data.filter(e => e.archetype == archetype && e.atk > atk);
+
+    const jsonFiltered = json.data.filter(e => e.archetype === archetype && e.atk > atk);
     console.log(jsonFiltered);
 
     const cardsFiltered = jsonFiltered.map(e => {
-        let newObj = {name: e.name, type: e.type, description:e.desc, card_image:e.card_images[0].image_url, atk:e.atk, def:e.def}
-        return newObj;
+        return {
+            name: e.name,
+            type: e.type,
+            description: e.desc,
+            card_image: e.card_images[0].image_url,
+            card_image_02: e.card_images[0].image_url_small,
+            card_image_id: e.card_images[0].id,
+            atk: e.atk,
+            def: e.def,
+            archetype:e.archetype
+        };
     });
 
     console.log(cardsFiltered);
@@ -112,3 +122,4 @@ app.get('/check-by-name', async (req, res) => {
         }
     } );*/
 });
+
