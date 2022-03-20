@@ -1,8 +1,10 @@
 
 const searchButton = document.getElementById('button-search');
+let list = document.getElementById('my-list-cards');
 
 searchButton.addEventListener( 'click', async (e)=>{
 
+    e.preventDefault();
     const atk = document.getElementById('minimum-atk').value;
     console.log(atk);
     const archetype = document.getElementById('archetype-name').value;
@@ -17,6 +19,14 @@ searchButton.addEventListener( 'click', async (e)=>{
     //document.getElementById('card-image').src =  json.map( e=>e.card_image );
     //document.getElementById('card-image').src =  json[0].card_image;
 
-    document.getElementById('card-details').innerHTML = json.map( e=>  e.name + ' ' + e.atk );
+    document.getElementById('card-details').innerText = json.map( e=>  {
+        let li = document.createElement('li');
+        li.innerText=e.name + ' \n ' + 'atk: ' + e.atk;
+        list.append(li);
+    } );
 
-} )
+} );
+
+function clearList(){
+    list.innerText = '';
+}

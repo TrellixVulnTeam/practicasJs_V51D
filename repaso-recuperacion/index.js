@@ -97,29 +97,28 @@ app.get('/search-archetype', async (req, res) => {
 /*http://localhost:6800/check-by-name?cardName=Alien*/
 app.get('/check-by-name', async (req, res) => {
 
-    const response = await fetch('https://db.ygoprodeck.com/api/v7/cardinfo.php');
-    const json = await response.json();
-
     const cardName = req.query.cardName;
+    const response = await fetch('https://db.ygoprodeck.com/api/v7/cardinfo.php?name=' + cardName);
+    const json = await response.json();
+    json["error"] ? res.json(false) : res.json(true);
 
-    /*filter only works for arrays*/
-    const jsonFiltered = json.data.filter(e =>e.name.toLowerCase().trim()===cardName.toLowerCase().trim() ?
-        res.json({exists: true, name: e.name}) : res.json({ exists: false,name: cardName }));
+});
 
-    console.log(jsonFiltered);
+/* Recibe por body dos parametros. Si son iguales a Java y Swing, responde con la dura verdad */
+/* curl -X POST -d 'language=java' -d 'tech=swing' http://localhost:6500/molaono */
+app.post("/molaono", (req, res) => {
+    const { language, tech } = req.body;
+    let response;
 
+    if (language.toLowerCase() !== "java" && tech.toLowerCase() !== "swing") {
+        response = { mola: "Si que mola" };
+    } else {
+        response = { mola: "No mola" };
+    }
+    res.json(response);
+});
 
-    /*-------esto no hace falta creo-----------*/
-    /*const newObject = jsonFiltered.map( e => {
-        if ( jsonFiltered){
-            let newObject = { exists:true, name:e.name };
-            console.log(newObject);
-            res.json(newObject);
-        }else if (jsonFiltered === []){
-            let newObject = { exists:false, name:cardName };
-            console.log(newObject);
-            res.json(newObject);
-        }
-    } );*/
+app.listen(6500, () => {
+    console.log("Servidor iniciado");
 });
 

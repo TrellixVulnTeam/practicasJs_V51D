@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>archetype searcher tailwind version</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+</head>
+<body class="bg-gray-200">
+
+<div id="main-container" class="flex flex-col justify-center content-center w-auto rounded-lg h-auto bg-gray-300 p-5 m-10 fg-white">
+
+    <h3 id="title">Search card</h3>
+
+    <form class="flex flex-col ">
+
+        <div class="flex flex-col self-center ">
+            <label for="minimum-atk">minimum atk value:</label>
+            <input class="w-auto rounded-lg" type="number" name="atk-input" id="minimum-atk">
+        </div>
+
+        <br/>
+
+        <div class="flex flex-col self-center " >
+
+            <label for="archetype-name">card archetype:</label>
+            <input class="w-auto rounded-lg" type="text" name="card-archetype-input" id="archetype-name">
+
+        </div>
+
+        <br/>
+
+        <div class="flex flex-col self-center " >
+            <button class="w-auto rounded-lg bg-indigo-400 p-2" type="submit" name="button-search" value="search"  id="button-search"
+                   onclick="clearList()">search</button>
+        </div>
+
+    </form>
+
+</div>
+
+<ul class = "flex flex-col"  id="my-list-cards"></ul>
+
+<br/>
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -10,27 +10,30 @@
 
 <div id="main-container">
 
-
     <h3 id="title">Search card</h3>
 
-    <p class="paragraphs">minimum atk value: </p>
-    <input type="number" name="atk-input" id="minimum-atk">
-    <p class="paragraphs">card archetype: </p>
-    <input type="text" name="card-archetype-input" id="archetype-name">
+    <form>
+        <label for="minimum-atk">
+            <p class="paragraphs">minimum atk value: </p>
+        </label>
+
+        <input type="number" name="atk-input" id="minimum-atk">
+
+        <label for="archetype-name">
+            <p class="paragraphs">card archetype: </p>
+        </label>
+        <input type="text" name="card-archetype-input" id="archetype-name">
+
+    </form>
 
     <br/>
-    <button name="button-search" value="search" class="paragraphs" id="button-search">search</button>
-
+    <input type="submit" name="button-search" value="search" class="paragraphs" id="button-search"
+           onclick="clearList()"/>
 </div>
+
+<ul id="my-list-cards"></ul>
 
 <br/>
-
-<div id="search-result"> results:
-<!--  <img id="card-image" alt="card image" src=""/>  -->
-<ul id="card-details-list" class="paragraphs">
-    <li id="card-details" class="paragraphs"> </li>
-</ul>
-</div>
 
 <script src="script.js"></script>
 

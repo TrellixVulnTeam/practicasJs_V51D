@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>introduce names and select random</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body style="background-color: #caccd1;" >
+
+<div id="main-container">
+
+    <div id="search-functions">
+        <div id="image-container">
+            <img id="yugioh-title" src="raw/yugioh-title.png" alt="yu-gi-oh" >
+        </div>
+
+        <div id="container-text-area">
+
+            <div class="container-indications">
+                <p class="p-bigger">Introduce card names:</p>
+                <p id="hint">use ',' between the names</p>
+            </div>
+
+            <label for="cards-text-area"></label><textarea id="cards-text-area"></textarea>
+
+        </div>
+
+        <div id="container-cards-num">
+            <div class="container-indications">
+                <p class="p-bigger" >number of cards:</p>
+            </div>
+            <label for="random-cards-num"></label><input id="random-cards-num" type="number">
+        </div>
+
+        <div id="buttons-container">
+            <button class="buttons" id="button-choose" type="button" >choose</button>
+            <button class="buttons" id="button-clear" type="button">clear</button>
+        </div>
+    </div>
+
+    <div id="result-container">
+        <div id="list-results"></div>
+    </div>
+
+    <div id="wrong-result-container">
+        <div id="wrong-list-results"></div>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
