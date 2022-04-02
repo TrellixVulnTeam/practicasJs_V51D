@@ -1,0 +1,158 @@
+
+#first-ship-result{
+    color: orange;
+}
+
+#second-ship-result{
+    color: orange;
+}
+
+#container-text-area{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 400px;
+    height: 100px;
+    margin: 20px;
+
+    border-radius: 3%;
+    background-color: #5b5e67;
+}
+
+
+
+.p-bigger{
+    font-size: small;
+    color: white;
+    font-family: Arial, serif;
+    font-style: normal;
+
+}
+
+.title{
+
+    color: white;
+    font-family: Arial, serif;
+    font-style: normal;
+
+}
+
+#container-cards-num{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 400px;
+    height: 100px;
+    margin: 20px;
+
+    border-radius: 3%;
+    background-color: #5b5e67;
+
+}
+
+#first-ship{
+    border-radius: 10%;
+}
+
+#second-ship{
+    border-radius: 10%;
+}
+
+.container-indications{
+    display: flex;
+    flex-direction: column;
+    margin-top: -20px;
+}
+
+#hint{
+    font-size: x-small;
+    color: darkgray;
+    font-family: Arial, serif;
+    margin-top: -10px;
+}
+
+#search-functions{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border-radius: 3%;
+    background-color: darkgray;
+
+}
+
+#main-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#image-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    margin-top: 30px;
+    border-radius: 3%;
+    background-color: #5b5e67;
+    width: 300px;
+    height: 90px;
+
+}
+
+#yugioh-title{
+    width: 150px;
+    height: 70px;
+    border-radius: 10%;
+    align-self: center;
+
+}
+
+#buttons-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
+    width: 200px;
+    height: 50px;
+    margin: 10px;
+
+    border-radius: 3%;
+    background-color: #5b5e67;
+}
+
+#result-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: auto;
+    height: auto;
+
+    margin-top: 20px;
+
+    font-family: "Arial", sans-serif;
+
+    padding: 40px;
+
+    border-radius: 3%;
+    background-color: #5b5e67;
+}
+
+
+
+.buttons{
+    background-color: orange;
+    color: black;
+    border-radius: 10px;
+    border:none;
+    padding: 5px;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}

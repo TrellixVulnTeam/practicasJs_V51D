@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>introduce names and select random</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+
+<body style="background-color: #caccd1;" >
+
+<div id="main-container">
+
+    <div id="search-functions">
+        <div id="image-container">
+            <img id="yugioh-title" src="raw/star_wars_logo.png" alt="yu-gi-oh" >
+        </div>
+
+        <h2 class="title">Calculate fastest ship (MGLT):</h2>
+
+        <div id="container-text-area">
+
+            <div class="container-indications">
+                <p class="p-bigger">Introduce first ship:</p>
+            </div>
+
+            <label for="first-ship"></label><input id="first-ship"/>
+
+        </div>
+
+        <div id="container-cards-num">
+            <div class="container-indications">
+                <p class="p-bigger" >Introduce the second ship:</p>
+            </div>
+            <label for="second-ship"></label><input id="second-ship" type="text">
+        </div>
+
+        <div id="buttons-container">
+            <button class="buttons" id="button-choose" type="button" >calculate fastest ship</button>
+        </div>
+    </div>
+
+    <div id="result-container">
+        <div id="list-results"></div>
+    </div>
+
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+  </head>
+  <body class="bg-green-400">
+    <div class="flex flex-col justify-center content-center w-auto rounded-lg h-auto bg-gray-300 p-5 m-10 fg-white">
+      <div class="flex flex-col self-center">
+        <p class="flex justify-center">Nombre unidades: </p>
+        <input class="" id="civName" type="text" name="" />
+      </div>
+      <div class="flex flex-col self-center mt-2">
+        <p class="flex justify-center">Ataque minimo: </p>
+        <input id="civAtt" type="text" name="" />
+      </div>
+      <div class="flex flex-col self-center mt-5">
+        <button id="searchButton" class="bg-indigo-500 rounded p-4 text-white">Buscar...</button>
+      </div>
+        <span id="result" class="flex justify-center">Resultado</span>
+    </div>
+  </body>
+  <script>
+
+    const searchButton = document.getElementById("searchButton");
+
+    searchButton.addEventListener("click", async (event) => {
+      const civName = document.getElementById("civName").value;
+      const civAtt = document.getElementById("civAtt").value;
+      const rawData = await fetch(`http://localhost:6500/unidades?nombre=${civName}&ataque=${civAtt}`);
+      const data = await rawData.json();
+      document.getElementById("result").innerHTML = JSON.stringify(data);
+    });
+  </script>
+</html>

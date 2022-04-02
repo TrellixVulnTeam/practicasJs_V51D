@@ -1,0 +1,14 @@
+$color_primario: aqua;
+$color_secundario: coral;
+
+.caja {
+  background-color: $color_primario;
+}
+
+@for $x from 1 through 4 {
+  .titulo-#{$x} {
+    color: $color_secundario;
+    @extend .caja;
+    font-size: 0rem + $x / 2;
+  }
+}
