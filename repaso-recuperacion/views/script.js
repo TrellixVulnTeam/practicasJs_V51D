@@ -21,7 +21,7 @@ searchButton.addEventListener( 'click', async (e)=>{
 
     document.getElementById('card-details').innerText = json.map( e=>  {
         let li = document.createElement('li');
-        li.innerText=e.name + ' \n ' + 'atk: ' + e.atk;
+        li.innerHTML=e.name + ' \n ' + 'atk: ' + e.atk + '<img style="width: 100px" src="' + e.card_image + '" alt="card image">';
         list.append(li);
     } );
 
